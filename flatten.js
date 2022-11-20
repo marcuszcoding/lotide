@@ -7,11 +7,11 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const assertEqualArray = function(arr1, arr2) {  
+const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2) === true) {
-    console.log(`✅✅✅ The arrays are equal! ${arr1} === ${arr2}`);
+    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
   } else {
-    console.log(`❌❌❌ The arrays are not equal! ${arr1} !== ${arr2}`);
+    console.log(`❌❌❌ Assertion Passed: ${arr1} !== ${arr2}`);
   }
 };
 
@@ -20,13 +20,13 @@ const flatten = function(array) {
   for (let i = 0; i < array.length; i++) {
     if (Array.isArray(array[i])) {
       for (let j = 0; j < array[i].length; j++) {
-      result.push(array[i][j]);
-    } 
+        result.push(array[i][j]);
+      }
     } else {
-       result.push(array[i]);
+      result.push(array[i]);
     }
-  } 
+  }
   console.log(result);
-}
+};
 
-flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6]
+flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]

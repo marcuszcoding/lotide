@@ -7,7 +7,7 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const assertEqualArray = function(arr1, arr2) {  
+const assertEqualArray = function(arr1, arr2) {
   if (eqArrays(arr1, arr2) === true) {
     console.log(`✅✅✅ The arrays are equal! ${arr1} === ${arr2}`);
   } else {
@@ -18,23 +18,23 @@ const assertEqualArray = function(arr1, arr2) {
 const middle = function(array) {
   let finalArray = [];
   if (array.length <= 2) {
-    return result;
+    return finalArray;
   } else if (array.length % 2 === 0) {
     finalArray.push(array[array.length / 2 - 1]);
     finalArray.push(array[array.length / 2]);
     return finalArray;
   } else {
-    finalArray.push(array[array.length / 2 - 0.5])
+    finalArray.push(array[array.length / 2 - 0.5]);
   }
   return finalArray;
 };
 
 //odd
-middle([1, 2, 3]) // => [2]
-middle([1, 2, 3, 4, 5]) // => [3]
+middle([1, 2, 3]); // => [2]
+middle([1, 2, 3, 4, 5]); // => [3]
 //even
-middle([1, 2, 3, 4]) // => [2, 3]
-middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
+middle([1, 2, 3, 4]); // => [2, 3]
+middle([1, 2, 3, 4, 5, 6]); // => [3, 4]
 //Arrays with 1-2 elements = []
-// Arrays with odd elements should return a single element 
-// Arrays with even elements should return 2 elements 
+// Arrays with odd elements should return a single element
+// Arrays with even elements should return 2 elements

@@ -8,8 +8,8 @@ const assertEqual = function(actual, expected) {
 
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
-    return false
-  };
+    return false;
+  }
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
       return false;
@@ -26,22 +26,20 @@ const eqArrays = function(array1, array2) {
 const eqObjects = function(object1, object2) {
   // Checking if the lengths of each object are the same
   if (Object.keys(object1).length !== Object.keys(object2).length) {
-    return false // returns flase if objects arent the same length
+    return false; // returns flase if objects arent the same length
   }
   for (const key in object1) {
     if (Array.isArray(object1[key])) { // if the value is an array in the object
-      //console.log("hello if", key)
-      //console.log(eqArrays(object1[key], object2[key]))
       if (!eqArrays(object1[key], object2[key])) {
-        return false
+        return false;
       }
-    }
-    else if (object1[key] !== object2[key]) {
+    } else if (object1[key] !== object2[key]) {
       return false;
     }
   }
   return true;
 };
+
 // const ab = { a: "1", b: "2" };
 // const ba = { b: "2", a: "1" };
 // console.log(eqObjects(ab, ba)); // => true

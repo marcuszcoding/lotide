@@ -25,4 +25,4 @@ const countLetters = function(string) {
 // Suggested to use for.. of loop
 // Shouldn't take in blank spaces
 countLetters("lighthouse in the house");
-// assertEqual(countLetters("lighthouse in the house")['l'], [1]);
+assertEqual(countLetters("lighthouse in the house").l, 1);

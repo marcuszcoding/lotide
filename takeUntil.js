@@ -3,6 +3,8 @@ const takeUntil = function(array, callback) {
   for (const element of array) {
     if (callback(element) !== true) {
       answer.push(element)
+    } else {
+      break
     }
   }
   return answer

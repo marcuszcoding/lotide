@@ -12,4 +12,4 @@ const middle = function(array) {
   return finalArray;
 };
 
-module.exports = middle
+module.exports = middle;

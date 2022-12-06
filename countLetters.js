@@ -6,7 +6,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-
 const countLetters = function(string) {
 // Need empty object to return resulting letter + count
   let results = {}; // Result being the numbet count of letters paired.
@@ -26,3 +25,5 @@ const countLetters = function(string) {
 // Shouldn't take in blank spaces
 // countLetters("lighthouse in the house");
 assertEqual(countLetters("lighthouse in the house").l, 1);
+
+module.exports = countLetters;

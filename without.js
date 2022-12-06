@@ -1,7 +1,7 @@
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
-    return false
-  };
+    return false;
+  }
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
       return false;
@@ -34,3 +34,5 @@ without(words, ["lighthouse"]); // no need to capture return value for this test
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 //without([1, 2, 3], [1]) // => [2, 3]
 //without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
+
+module.exports = without;
